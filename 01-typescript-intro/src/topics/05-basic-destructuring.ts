@@ -28,7 +28,7 @@ console.log("Song Duration: " + audioPlayer.songDuration);
 console.log("Author: " + audioPlayer.details.author);
 
 // with destructuring
-const { song: otherSong, songDuration: duration, details } = audioPlayer; // se desestructura la propiedad song y songDuration del objeto audioPlayer en unas constantes llamadas otherSong y duration. Sintaxis: 'propiedad: nombreDeLaContante'
+const { song: otherSong, songDuration: duration, details } = audioPlayer; // se destructura la propiedad song y songDuration del objeto audioPlayer en unas constantes llamadas otherSong y duration. Sintaxis: 'propiedad: nombreDeLaContante'
 const { author } = details;
 
 console.log("Song: " + otherSong);
