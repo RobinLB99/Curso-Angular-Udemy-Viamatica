@@ -8,7 +8,7 @@ import "./style.css";
 // import "./topics/06-functions-destructuring";
 // import "./topics/07-imports-exports";
 // import "./topics/08-classes";
-import "./topics/09-composition-on-inheritance";
+// import "./topics/09-composition-on-inheritance";
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
 
