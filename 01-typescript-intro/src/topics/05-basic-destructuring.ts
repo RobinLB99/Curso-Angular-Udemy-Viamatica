@@ -1,5 +1,5 @@
 /**
- * Desestructuración de objetos.
+ * Destructuración de objetos.
  */
 
 interface AudioPlayer {
