@@ -1,3 +1,6 @@
-*/node_modules/
-*/vscode/
-*/.angular/
+*/node_modules/*
+*/vscode/*
+*/.angular/*
+02.2-Tarea-Refuerzo-de-lo-aprendido/.vscode/extensions.json
+02.2-Tarea-Refuerzo-de-lo-aprendido/.vscode/launch.json
+02.2-Tarea-Refuerzo-de-lo-aprendido/.vscode/tasks.json
