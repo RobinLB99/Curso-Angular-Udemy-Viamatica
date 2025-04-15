@@ -7,7 +7,8 @@
   <td>Método:</td>
   <dd>{{ heroDescription() }}</dd>
   <td>Capitalizado:</td>
-  <dd>{{ capitalizedName() }}</dd>
+  <!-- <dd>{{ capitalizedName() }}</dd> -->
+  <dd>{{ nombre() | uppercase }}</dd>
 </dl>
 
 <button class="btn btn-primary mx-1" (click)="changeHero()">

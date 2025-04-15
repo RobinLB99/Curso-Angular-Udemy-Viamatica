@@ -1,3 +1,4 @@
+import { UpperCasePipe } from '@angular/common';
 import {
   Component,
   computed,
@@ -7,7 +8,7 @@ import {
 } from '@angular/core';
 
 @Component({
-  imports: [],
+  imports: [UpperCasePipe],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css',
 })
