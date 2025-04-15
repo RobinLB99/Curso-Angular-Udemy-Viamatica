@@ -25,10 +25,6 @@ export class HeroComponent {
     return this.nombre().toUpperCase();
   });
 
-  capitalizado(): string {
-    return this.nombre().toUpperCase();
-  }
-
   changeHero(): void {
     this.nombre.set('Spiderman');
     this.edad.set(25);
