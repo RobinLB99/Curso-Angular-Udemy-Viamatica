@@ -1,0 +1,52 @@
+<h1>Dragonball Page</h1>
+<br />
+<div class="row">
+  <div class="col-12 col-sm-6">
+    <h3>
+      Agregar: <strong>{{ name() }} {{ power() == 0 ? "" : power() }}</strong>
+    </h3>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Nombre del personaje"
+      required
+      [value]="name()"
+      (change)="name.set(txtName.value)"
+      #txtName
+    />
+
+    <input
+      type="number"
+      class="form-control mt-2"
+      placeholder="Poder"
+      required
+      min="0"
+      [value]="power().valueOf()"
+      (change)="power.set(txtPower.valueAsNumber)"
+      #txtPower
+    />
+    <button (click)="addCharacter()" class="mt-2 btn btn-primary">
+      Agregar
+    </button>
+  </div>
+
+  <div class="col-12 col-sm-6">
+    <h3>personajes fuertes</h3>
+    <ul>
+      @for (character of characters(); track character.name; let idx = $index) {
+      @if (character.power > 999) {
+      <li>
+        <span>{{ idx + 1 }}. </span>
+        <span>{{ character.name }} </span>
+        <span
+          [class.text-danger]="character.power > 8999"
+          [class.text-primary]="character.power < 9000"
+        >
+          <!-- [ngClass]="powerClasses()" -->
+          <strong>({{ character.power }})</strong>
+        </span>
+      </li>
+      } }
+    </ul>
+  </div>
+</div>
