@@ -1,0 +1,21 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #212121;
+  color: white;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.379);
+}
+
+nav a.active {
+  font-weight: bold;
+  border-bottom: 2px solid white;
+}
