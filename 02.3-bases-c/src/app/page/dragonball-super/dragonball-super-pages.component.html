@@ -1,0 +1,37 @@
+<h1>Dragonball Super Page</h1>
+<br />
+<div class="row">
+  <div class="col-12 col-sm-6">
+    <h3>
+      Agregar: <strong>{{ name() }} {{ power() == 0 ? "" : power() }}</strong>
+    </h3>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Nombre del personaje"
+      required
+      [value]="name()"
+      (change)="name.set(txtName.value)"
+      #txtName
+    />
+
+    <input
+      type="number"
+      class="form-control mt-2"
+      placeholder="Poder"
+      required
+      min="0"
+      [value]="power().valueOf()"
+      (change)="power.set(txtPower.valueAsNumber)"
+      #txtPower
+    />
+    <button (click)="addCharacter()" class="mt-2 btn btn-primary">
+      Agregar
+    </button>
+  </div>
+
+  <div class="col-12 col-sm-6">
+    <dragonball-character-list [characters]="characters()" />
+    <!-- Envio el arrgle de caracteres al compomente hijo por medio de un artibuto y el valor va a ser el valor de la señal characters  -->
+  </div>
+</div>

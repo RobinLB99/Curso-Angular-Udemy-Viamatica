@@ -1,0 +1,17 @@
+<h3>personajes fuertes</h3>
+<ul>
+  @for (character of characters(); track character.name; let idx = $index) { @if
+  (character.power > 999) {
+  <li>
+    <span>{{ idx + 1 }}. </span>
+    <span>{{ character.name }} </span>
+    <span
+      [class.text-danger]="character.power > 8999"
+      [class.text-primary]="character.power < 9000"
+    >
+      <!-- [ngClass]="powerClasses()" -->
+      <strong>({{ character.power }})</strong>
+    </span>
+  </li>
+  } }
+</ul>
